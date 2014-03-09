@@ -1,59 +1,60 @@
 --- 
-ua: 
-  devise: 
-    confirmations: 
-      confirmed: ""
-      send_instructions: ""
-      send_paranoid_instructions: ""
-    failure: 
-      already_authenticated: ""
-      inactive: ""
-      invalid: ""
-      invalid_token: ""
-      locked: ""
-      timeout: ""
-      unauthenticated: ""
-      unconfirmed: ""
-    mailer: 
-      confirmation_instructions: 
-        subject: ""
-      reset_password_instructions: 
-        subject: ""
-      unlock_instructions: 
-        subject: ""
-    omniauth_callbacks: 
-      failure: ""
-      success: ""
-    passwords: 
-      send_instructions: ""
-      send_paranoid_instructions: ""
-      updated: ""
-      updated_not_active: ""
-    registrations: 
-      destroyed: ""
-      signed_up: ""
-      signed_up_but_inactive: ""
-      signed_up_but_locked: ""
-      signed_up_but_unconfirmed: ""
-      update_needs_confirmation: ""
-      updated: ""
-    sessions: 
-      remember_me: ""
-      signed_in: ""
-      signed_out: ""
-    social_singed: ""
-    unlocks: 
-      send_instructions: ""
-      send_paranoid_instructions: ""
-      unlocked: ""
-  errors: 
-    messages: 
-      already_confirmed: ""
-      expired: ""
-      not_found: ""
-      not_locked: ""
-      not_saved: 
-        few: ""
-        many: ""
-        one: ""
-        other: ""
+ua:
+  devise:
+    confirmations:
+      confirmed: Ваш обліковий запис підтверджено.
+      send_instructions: Протягом декількох хвилин ви отримаєте лист з інструкціями із підтвердження вашого облікового запису.
+      send_paranoid_instructions: Якщо ваша e-mail адреса є в нашій базі даних, то протягом декількох хвилин ви отримаєте лист з інструкціями із підтвердження вашого облікового запису.
+    failure:
+      already_authenticated: Ви вже увійшли в систему.
+      inactive: Ваш обліковий запис ще не активовано.
+      invalid: Невірна e-mail адреса або пароль.
+      last_attempt:
+      locked: Ваш обліковий запис заблоковано.
+      not_found_in_database: Невірна e-mail адреса або пароль.
+      timeout: Ваш сеанс закінчився. Будь ласка, увійдіть в систему знову.
+      unauthenticated: Вам необхідно увійти в систему або зареєструватися.
+      unconfirmed: Ви повинні підтвердити ваш обліковий запис.
+    mailer:
+      confirmation_instructions:
+        subject: Інструкції з підтвердження облікового запису
+      reset_password_instructions:
+        subject: Інструкції з відновлення пароля
+      unlock_instructions:
+        subject: Інструкції з розблокування облікового запису
+    omniauth_callbacks:
+      failure: Ви не можете увійти в систему з обліковим записом з %{kind}, тому що "%{reason}".
+      success: Вхід в систему з обліковим записом з %{kind}.
+    passwords:
+      no_token: Доступ до цієї сторінки можливий тільки за посиланням з листа про відновлення пароля. Якщо Ви перейшли по такому посиланню, будь ласка переконайтеся що Ви скопіювали цілком усе посилання.
+      send_instructions: Протягом декількох хвилин ви отримаєте лист з інструкціями з відновлення вашого пароля.
+      send_paranoid_instructions: Якщо ваша e-mail адреса є в нашій базі даних, то протягом декількох хвилин ви отримаєте лист з інструкціями із відновлення вашого пароля.
+      updated: Ваш пароль було змінено. Тепер ви увійшли в систему.
+      updated_not_active: Ваш пароль було змінено.
+    registrations:
+      destroyed: До побачення! Ваш обліковий запис видалено . Сподіваємося знову побачити вас.
+      signed_up: Вітаємо! Ви успішно зареєструвалися.
+      signed_up_but_inactive: Ви успішно зареєстровані. Однак, ви не можете увійти в систему , тому що ваш обліковий запис не активовано.
+      signed_up_but_locked: Ви успішно зареєстровані. Однак, ви не можете увійти в систему, тому що ваш обліковий запис заблокований.
+      signed_up_but_unconfirmed: Лист з посиланням для підтвердження відправлено на ваш e-mail. Будь ласка, перейдіть за посиланням, щоб підтвердити ваш обліковий запис.
+      update_needs_confirmation: Ви успішно оновили дані вашого облікового запису , але нам потрібно перевірити вашу нову e-mail адресу. Будь ласка, перевірте вашу поштову скриньку і перейдіть за посиланням, щоб закінчити процедуру перевірки вашої нової e-mail адреси.
+      updated: Ваш обліковий запис змінено.
+    sessions:
+      signed_in: Вхід в систему виконаний.
+      signed_out: Вихід з системи виконаний.
+    unlocks:
+      send_instructions: Протягом декількох хвилин ви отримаєте лист з інструкціями по розблокуванню вашого профілю.
+      send_paranoid_instructions: Якщо ваш обліковий запис існує, то протягом декількох хвилин ви отримаєте лист з інструкціями по його розблокуванню.
+      unlocked: Ваш обліковий запис розблоковано. Тепер ви увійшли в систему.
+  errors:
+    messages:
+      already_confirmed: вже підтверджена. Будь ласка , спробуйте увійти в систему
+      confirmation_period_expired: повинен бути підтверджений протягом %{period}, будь ласка, повторіть запит
+      expired: застаріла. Будь ласка, зробіть запит на новий
+      not_found: не знайдено
+      not_locked: чи не заблокований
+      not_saved:
+        few: '%{resource}: збереження не вдалося через %{count} помилок'
+        many: '%{resource}: збереження не вдалося через %{count} помилок'
+        one: '%{resource}: збереження не вдалося через %{count} помилки'
+        other: '%{resource}: збереження не вдалося через %{count} помилки'
